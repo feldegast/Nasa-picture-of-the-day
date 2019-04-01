@@ -14,6 +14,13 @@ The complete description of the image is displayed in the terminal with the link
      
 ![Screenshot](screenshot.png)
 
+## Download the Windows .exe version :
+
+You can run it with Python 3 and the right libraries or for Windows you can use the .exe software that I created there :
+
+[![Download Nasa-Picture-Of-The-Day](https://img.shields.io/sourceforge/dm/nasa-picture-of-the-day.svg)](https://sourceforge.net/projects/nasa-picture-of-the-day/files/latest/download)
+[![Download Nasa-Picture-Of-The-Day](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/nasa-picture-of-the-day/files/latest/download)
+
 ## What you need to make it work :  
 
 You need to have an Api key from the Nasa. You can have a free key there :
