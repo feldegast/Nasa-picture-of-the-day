@@ -65,9 +65,9 @@ If you miss a module, install it with the command pip install module-name. For e
 Your user must have read and write access on the current running 
 directory.
 
-## Error - video not a picture:
+## Video not a picture:
 
-I am working on the code to open the web browser when the Nasa image of the day is a video.
+Now the software open your default web browser to read the video.
 
 ## Developer - Author
 
