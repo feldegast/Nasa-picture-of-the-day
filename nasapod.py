@@ -16,6 +16,7 @@ import json
 import webbrowser
 
 def gui_vid():
+    print(pictitle)
     print(information)
     webbrowser.open(video_url)
     image = "nasa.jpg"
@@ -62,7 +63,7 @@ def start():
         print("")
 
     # Get your own api key here in the " " # https://api.nasa.gov/index.html#apply-for-an-api-key
-    apikey = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    apikey = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
     url = ("https://api.nasa.gov/planetary/apod?api_key="+str(apikey))
 
