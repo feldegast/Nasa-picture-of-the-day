@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 # Developer : Hamdy Abou El Anein
 
@@ -20,7 +20,7 @@ def gui_vid():
     print(information)
     webbrowser.open(video_url)
     image = "nasa.jpg"
-    msg = ("Today there's no picture !\n\n")+str(information)+str("\n\nWatch the video there : ")+str(video_url)
+    msg = ("Today there's no picture !\n\n")+str(pictitle)+str("\n\n")+str(information)+str("\n\nWatch the video there : ")+str(video_url)
     choices = choices = ["Ok", "Reload"]
     reply = buttonbox(msg, image=image, choices=choices)
     if reply == "Ok":
@@ -63,7 +63,7 @@ def start():
         print("")
 
     # Get your own api key here in the " " # https://api.nasa.gov/index.html#apply-for-an-api-key
-    apikey = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    apikey = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
     url = ("https://api.nasa.gov/planetary/apod?api_key="+str(apikey))
 
