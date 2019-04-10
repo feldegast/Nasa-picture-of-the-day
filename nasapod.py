@@ -13,11 +13,13 @@ import sys
 import os
 import wget
 import json
+import webbrowser
 
 def gui_vid():
-
+    print(information)
+    webbrowser.open(video_url)
     image = "nasa.jpg"
-    msg = ("Today there's no picture !\n\n")+str(information)+str("\n\nWatch the video there : ")+str(SkyPic)
+    msg = ("Today there's no picture !\n\n")+str(information)+str("\n\nWatch the video there : ")+str(video_url)
     choices = choices = ["Ok", "Reload"]
     reply = buttonbox(msg, image=image, choices=choices)
     if reply == "Ok":
@@ -43,7 +45,7 @@ def gui_pic():
         sys.exit(0)
 
 def start():
-    global information,SkyPic,pictitle,hdurl
+    global information,SkyPic,pictitle,hdurl,video_url
 
     filePath = "pic-of-day.jpg"
 
@@ -60,7 +62,7 @@ def start():
         print("")
 
     # Get your own api key here in the " " # https://api.nasa.gov/index.html#apply-for-an-api-key
-    apikey = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    apikey = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
     url = ("https://api.nasa.gov/planetary/apod?api_key="+str(apikey))
 
@@ -72,14 +74,21 @@ def start():
         information = pod["explanation"]
         SkyPic = pod["url"]
         pictitle = pod["title"]
-        hdurl = pod["hdurl"]
+        try:
+            hdurl = pod["hdurl"]
+        except:
+            pass
+        try:
+            video_url = pod["url"]
+        except:
+            pass
 
         if pod["media_type"] == "image": # check if this is an image today
             url1 = (SkyPic)
             filename1 = wget.download(url1, out="pic-of-day.jpg")  # The picture is downloaded and named pic-of-day.jpg
             gui_pic()
         else:
-            print(("It's a video today ! Watch the video there :")+str(SkyPic))
+            print(("\nIt's a video today ! Watch the video there :\n\n")+str(video_url)+str("\n\n"))
             gui_vid()
 
 start()
