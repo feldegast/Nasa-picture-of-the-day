@@ -80,7 +80,7 @@ def start():
         print("")
 
     # Get your own api key here in the " " # https://api.nasa.gov/index.html#apply-for-an-api-key
-    apikey = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    apikey = "HitAABvmHzZV84M09k3BFrgqyDBhWhuUlZx13ghJ"
 
     url = "https://api.nasa.gov/planetary/apod?api_key=" + str(apikey)
 
